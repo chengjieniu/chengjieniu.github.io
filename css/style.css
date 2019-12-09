@@ -517,6 +517,11 @@ p.agile{
 	font-size:25px;
 	margin-bottom:8px;
 }
+.about-right h3{
+	color:#000;
+	font-size:20px;
+	margin-bottom:8px;
+}
 .about-right-part2{
 	margin:0px 0px;
 }
@@ -1561,6 +1566,11 @@ div#contact {
 	.about-right-text{
 		width:90%;
 		float:left;
+	}
+	.about-right-text h3{
+		color:#000;
+		font-size:20px;
+		margin-bottom:8px;
 	}
 	.about-btm-left,.video {
 		width: 50%;
