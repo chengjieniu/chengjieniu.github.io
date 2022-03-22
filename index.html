@@ -1,0 +1,726 @@
+<!DOCTYPE HTML>
+
+<!--
+			animate.css 学习手册：http://daneden.github.io/animate.css/
+			学习资料：
+			data-wow-duration:改变动画时间
+			data-wow-delay:延迟在动画开始之前
+			data-wow-offset:距离开始动画(浏览器底部)
+			data-wow-iteration:动画重复的次数
+		-->
+
+<html>
+
+<head>
+	<style>
+		a{text-decoration:underline} 
+	</style>
+	<title>Chengjie Niu's Homepage</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="" />
+	<script type="applisalonion/x-javascript">
+		addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+	</script>
+	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<!-- Custom Theme files -->
+	<link href="css/iconeffects.css" rel='stylesheet' type='text/css' />
+	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" href="css/swipebox.css">
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+	<!--/web-font-->
+	<!--<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,700' rel='stylesheet' type='text/css'>-->
+	<!--/script-->
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 900);
+			});
+		});
+	</script>
+	<!-- swipe box js -->
+	<script src="js/jquery.swipebox.min.js"></script>
+	<script type="text/javascript">
+		jQuery(function ($) {
+			$(".swipebox").swipebox();
+		});
+	</script>
+	<!-- //swipe box js -->
+	<!--animate-->
+	<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+	<script src="js/wow.min.js"></script>
+	<script>
+		new WOW().init();
+	</script>
+
+</head>
+
+<body>
+	<div id="main">
+
+		<!--start-home-->
+		<div class="banner" id="home">
+			<!--菜单栏及背景图配置-->
+			<div class="header-bottom">
+				<!--标头的容器配置-->
+				<div class="container">
+					<div class="fixed-header">
+						<!--logo-->
+						<div class="logo">
+							<a href="index.html">
+								<h1>Chengjie Niu's Homepage</h1>
+							</a>
+						</div>
+						<!--//logo-->
+						<div class="top-menu">
+							<span class="menu"> </span>
+							<nav class="link-effect-4" id="link-effect-4">
+								<ul>
+									<li class="hvr-bounce-to-bottom"><a href="index.html">Homepage</a></li>
+									<li class="hvr-bounce-to-bottom"><a href="#Publications"
+											class="scroll">Publications</a></li>
+									<li class="hvr-bounce-to-bottom"><a href="#Awards" class="scroll">Awards</a></li>
+									<!--								 <li class="hvr-bounce-to-bottom"><a href="#Group" class="scroll">Group</a></li>-->
+									<li class="hvr-bounce-to-bottom"><a href="#Contact" class="scroll">Contact Me</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						<!-- script-for-menu -->
+						<script>
+							$("span.menu").click(function () {
+								$(".top-menu ul").slideToggle("slow", function () {});
+							});
+						</script>
+						<!-- script-for-menu -->
+						<div class="clearfix"></div>
+						<script>
+							$(document).ready(function () {
+								var navoffeset = $(".header-bottom").offset().top;
+								$(window).scroll(function () {
+									var scrollpos = $(window).scrollTop();
+									if (scrollpos >= navoffeset) {
+										$(".header-bottom").addClass("fixed");
+									} else {
+										$(".header-bottom").removeClass("fixed");
+									}
+								});
+
+							});
+						</script>
+					</div>
+				</div>
+			</div>
+
+			<!-- 	<div class="banner" id="home">
+	<div class="logo">
+					<a><h1>Chengjie Niu</h1></a>
+					<a><h2>Ph.D. at NUDT</h2></a>
+				<!-- /container 
+	</div>
+	</div> -->
+
+		</div>
+		<!--//end-home-->
+
+
+
+
+
+		<!--自我介绍-->
+		<div class="about" id="about">
+			<div class="container">
+				<div class="col-md-6 about-left">
+
+					<!--个人头像照片-->
+					<!--<div class="baner-top">
+					<a href="images/co.png" class="b-link-stripe b-animate-go  swipebox">
+						
+							<img src="images/co.png" alt=" " height="250" width="350" />
+						
+					</a>
+				</div>	
+				
+				<!-- <div class="media">
+					<span class="pull-left"><img src="images/my1.jpg" width="210px" height="260px"/></span>
+					<div class="media-body">
+						<p>Department of Computer Science,
+						<i><b>Peking University</b></i></p>
+						<span style="font-weight:bold">Sep. 2014 - Jul. 2018</span>
+						<p>Bachelor of Science</p>
+					</div>
+				</div> -->
+
+					<!--<li><a href="https://arxiv.org/pdf/1906.06693.pdf">[Paper]</a></li><br>		-->
+
+					<!--<h2 class="tittle" style="vertical-align:middle"><a href="pdf_files/ChengjieNiu_CV.pdf">CV <img src = "images/cv.jpg" width="36px"></a></h2>-->
+					<p class="agile">My name is Chengjie Niu (牛成洁). I am a Ph.D. candidate at <a
+							href="https://english.nudt.edu.cn/" target="_blank">
+							<font color="blue">National University of Defense Technology (NUDT), </font>
+						</a>supervised by Yueshan Xiong (熊岳山) and <a href="http://kevinkaixu.net/" target="_blank">
+							<font color="blue">Kai Xu (徐凯). </font>
+						</a>From 2020, I am a remote visiting PhD
+						student under the supervision of <a href="https://www.cs.sfu.ca/~haoz/" target="_blank">
+							<font color="blue">Hao (Richard) Zhang (张皓). </font>
+						</a>I received my master degree in computer science from NUDT. I got my bachelor degree at <a
+							href="http://www.en.sdu.edu.cn/" target="_blank">
+							<font color="blue">Shandong University</font>
+						</a>, advised by Chenglei Yang. My research interests include Computer Vision and Computer
+						Graphics. <a href="pdf_files/ChengjieNiu_CV.pdf" target="_blank">
+							<font color="blue">[CV]</font>
+						</a></p>
+
+				</div>
+				<div class="col-md-6 about-right">
+					<div class="about-right-part1">
+						<div class="col-md-1 num">
+							<h5>01</h5>
+						</div>
+						<div class="col-md-11 about-right-text">
+							<h4>National University of Defense Technology, Changsha, China</h4>
+							<p>
+								<li>M.S., Computer Science and Technology</li>
+								<p>
+									<li>Ph.D., Computer Science and Technology</li>
+									<li>Supervisor: Prof. Yueshan Xiong and Kai Xu</li>
+								</p>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="about-right-part2">
+						<div class="col-md-1 num">
+							<h5>02</h5>
+						</div>
+						<div class="col-md-11 about-right-text">
+							<h4>Shandong University, Jinan, China</h4>
+							<p>
+								<li>B.S., Computer Science and Technology</li>
+								<li>Supervisor: Prof. Chenglei Yang</li>
+								<li>Overall GPA: 90.03/100</li>
+							</p>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<!-- <div class="about-right-part3">
+					<div class="col-md-1 num">
+						<h5>03</h5>
+					</div>
+					<div class="col-md-11 about-right-text">
+						<h4>XXXXXX</h4>
+						<p><li>XXXXXXXXXXXXXX</li>
+							<li>XXXXXX</li>
+							<li>XXXXXXXXX</li>
+						</p>
+					</div>
+					<div class="clearfix"></div>
+				</div> -->
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<!--//自我介绍-->
+
+
+
+		<!--publications-->
+		<div class="gallery" id="Publications">
+			<div class="container">
+				<h3 class="tittle">Publications</h3>
+				<div class="gallery-grids">
+					<!--paper5------------------------------------------------------------------->
+					<div class="col-md-6 col-sm-6 ggd baner-top big wow fadeInDown animated" data-wow-delay=".5s">
+						<a href="images/2022 cvpr RIM_net.png" class="b-link-stripe b-animate-go  swipebox">
+							<div class="gal-spin-effect vertical ">
+								<img src="images/2022 cvpr RIM_net.png" alt=" " />
+								<div class="gal-text-box">
+									<div class="info-gal-con">
+										<h4>RIM-Net: Recursive Implicit Fields for Unsupervised Learning of Hierarchical
+											Shape Structures</h4>
+										<span class="separator"></span>
+										<p>CVPR 2022</p>
+										<span class="separator"></span>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+
+					<div class="col-md-6 about-right-text">
+						<br>
+						<h3><a href="https://arxiv.org/pdf/2201.12763.pdf" style="text-decoration:underline" target="_blank">RIM-Net: Recursive Implicit
+								Fields for Unsupervised Learning of Hierarchical Shape Structures</a></h3><br>
+						<p>
+							<li><b>Chengjie Niu</b>, Manyi Li, Kai Xu, Hao Zhang</li><br>
+							<li>IEEE Conference on Computer Vision and Pattern Recognition (CVPR 2022)</li><br>
+							<li><a href="https://arxiv.org/pdf/2201.12763.pdf" style="text-decoration:underline" target="_blank">[Paper]</a></li>
+							<br>
+							<li><a href="https://github.com/chengjieniu/RIM-Net" style="text-decoration:underline" target="_blank">[Code]</a></li>
+
+						</p>
+						<br>
+						<br>
+					</div>
+					<!--paper5------------------------------------------------------------------->
+
+					<!--paper6------------------------------------------------------------------->
+					<div class="col-md-6 col-sm-6 ggd baner-top big wow fadeInDown animated" data-wow-delay=".5s">
+						<a href="images/PG2020.png" class="b-link-stripe b-animate-go  swipebox">
+							<div class="gal-spin-effect vertical" style="height: 310px;">
+								<img src="images/PG2020.png" style="position: absolute;top: 20%; height: 150px;"
+									alt=" " />
+								<div class="gal-text-box">
+									<div class="info-gal-con">
+										<h4>Weakly Supervised Part-wise 3D Shape Reconstruction from Single-View RGB
+											Images</h4>
+										<span class="separator"></span>
+										<p>PG 2020</p>
+										<span class="separator"></span>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+
+					<div class="col-md-6 about-right-text">
+						<br>
+						<h3><a href="https://kevinkaixu.net/papers/niu_pg20_partsvr.pdf" style="text-decoration:underline" target="_blank">Weakly
+								Supervised Part-wise 3D Shape Reconstruction from Single-View RGB Images</a></h3>
+						<br>
+						<br>
+						<p>
+							<li><b>Chengjie Niu</b>, Yang Yu, Zhenwei Bian, Jun Li, Kai Xu</li>
+							<br>
+							<br>
+							<li>Pacific Graphics 2020</li>
+							<br>
+							<br>
+							<li><a href="https://kevinkaixu.net/papers/niu_pg20_partsvr.pdf" style="text-decoration:underline" target="_blank">[Paper]</a>
+							</li>
+						</p>
+
+						<br>
+						<br>
+						<br>
+					</div>
+					<!--paper6------------------------------------------------------------------->
+
+					<!--paper0------------------------------------------------------------------->
+					<div class="col-md-6 col-sm-6 ggd baner-top big wow fadeInRight animated" data-wow-delay=".5s">
+						<a href="images/paper0.png" class="b-link-stripe b-animate-go  swipebox">
+							<div class="gal-spin-effect vertical ">
+								<img src="images/paper0.png" alt=" " />
+								<div class="gal-text-box">
+									<div class="info-gal-con">
+										<h4>Learning Part Generation and Assembly for Structure-aware Shape Synthesis
+										</h4>
+										<span class="separator"></span>
+										<p>AAAI 2020</p>
+										<span class="separator"></span>
+
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+
+					<div class="col-md-6 about-right-text">
+						<br>
+						<br>
+						<h3><a href="https://arxiv.org/pdf/1906.06693.pdf"
+							style="text-decoration:underline" target="_blank">Learning Part Generation and Assembly for Structure-aware Shape
+								Synthesis</a></h3><br>
+						<p>
+							<li>Jun Li,<b> Chengjie Niu</b>, Kai Xu</li><br>
+							<li>Thirty-Fourth AAAI Conference on Artificial Intelligence(AAAI 2020)</li><br>
+							<li><a href="https://arxiv.org/pdf/1906.06693.pdf" style="text-decoration:underline" target="_blank">[Paper]</a></li><br>
+							<!--<li><a href="paper/Learning Part Generation and Assembly for Structure-aware Shape Synthesis.pdf">[Paper]</a></li><br>-->
+							<br>
+							<br>
+							<br>
+							<br>
+							<!--为了页面排版不错位加的br-->
+
+
+						</p>
+					</div><br>
+					<!--paper0----------------------------------------------------------------->
+
+					<!--paper1------------------------------------------------------------------->
+					<div class="col-md-6 col-sm-6 ggd baner-top big wow fadeInRight animated" data-wow-delay=".5s">
+						<a href="images/paper1.jpg" class="b-link-stripe b-animate-go  swipebox">
+							<div class="gal-spin-effect vertical ">
+								<img src="images/paper1.jpg" alt=" " />
+								<div class="gal-text-box">
+									<div class="info-gal-con">
+										<h4>Im2Struct: Recovering 3D Shape Structure from a Single RGB Image</h4>
+										<span class="separator"></span>
+										<p>CVPR 2018</p>
+										<span class="separator"></span>
+
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+
+					<div class="col-md-6 about-right-text">
+						<br>						
+						<h3><a href="http://openaccess.thecvf.com/content_cvpr_2018/html/Niu_Im2Struct_Recovering_3D_CVPR_2018_paper.html"
+							style="text-decoration:underline"  target="_blank">Im2Struct: Recovering 3D Shape Structure from a Single RGB Image</a>
+						</h3><br>
+						<p>
+							<li><b>Chengjie Niu</b>, Jun Li, Kai Xu</li><br>
+							<li>IEEE Conference on Computer Vision and Pattern Recognition (CVPR 2018)</li><br>
+							<li><a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Niu_Im2Struct_Recovering_3D_CVPR_2018_paper.pdf"
+								style="text-decoration:underline"  target="_blank">[Paper]</a></li>
+							<br>
+							<li>
+								<a href="https://github.com/chengjieniu/Im2Struct" style="text-decoration:underline"  target="_blank">[Code]</a></li><br>
+							<!--<li><a href="paper/Niu_Im2Struct_Recovering_3D_CVPR_2018_paper.pdf">[Paper]</a></li><br>-->
+							<br>
+
+
+						</p>
+						<br>
+					</div>
+					<!--paper1----------------------------------------------------------------->
+
+					<!--paper2------------------------------------------------------------------->
+					<div class="col-md-6 col-sm-6 ggd baner-top small wow fadeInLeft animated" data-wow-delay=".5s">
+						<!--fadeInLeft:从左侧飞入-->
+						<a href="images/paper2.jpg" class="b-link-stripe b-animate-go  swipebox">
+							<div class="gal-spin-effect vertical ">
+								<img src="images/paper2.jpg" alt=" " />
+								<div class="gal-text-box">
+									<div class="info-gal-con">
+										<h4>Supporting Easy Physical-to-Virtual Creation of Mobile VR Maze</h4>
+										<span class="separator"></span>
+										<p>CHI 2017</p>
+										<span class="separator"></span>
+
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+
+					<div class="col-md-6 about-right-text">
+						<br>
+						<br>
+						<h3><a href="https://dl.acm.org/citation.cfm?id=3025453.3025494" style="text-decoration:underline" target="_blank">Supporting Easy
+								Physical-to-Virtual Creation of Mobile VR Maze</a></h3><br>
+						<p>
+							<li>Wei Gai, Chenglei Yang, Yulong Bian, Chia Shen, Xiangxu Meng, Lu Wang, Juan Liu, Mingda
+								Dong, <b>Chengjie Niu</b>, Cheng Lin</li><br>
+							<li>Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems, Pages
+								5016-5028 (CHI 2017)</li><br>
+							<li><a href="https://dl.acm.org/citation.cfm?id=3025453.3025494" style="text-decoration:underline"  target="_blank">[Paper]</a>
+							</li><br>
+							<!--<li><a href="paper/Supporting Easy Physical-to-Virtual Creation of Mobile VR Maze.pdf">[Paper]</a></li><br>-->
+							<br>
+							<br>
+
+
+						</p>
+					</div><br>
+					<!--paper2------------------------------------------------------------------->
+
+					<!--paper3------------------------------------------------------------------->
+					<div class="col-md-6 col-sm-6 ggd baner-top small wow fadeInLeft animated" data-wow-delay=".5s">
+						<a href="images/paper3.jpg" class="b-link-stripe b-animate-go  swipebox">
+							<div class="gal-spin-effect vertical ">
+								<img src="images/paper3.jpg" alt=" " />
+								<div class="gal-text-box">
+									<div class="info-gal-con">
+										<h4>UbiMaze: a new genre of virtual reality game based on mobile devices</h4>
+										<span class="separator"></span>
+										<p>MobileHCI 2016</p>
+										<span class="separator"></span>
+
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+
+					<div class="col-md-6 about-right-text">
+						<br>						
+						<h3><a href="https://dl.acm.org/citation.cfm?id=2961824&dl=ACM&coll=DL" style="text-decoration:underline"  target="_blank">UbiMaze:
+								a new genre of virtual reality game based on mobile devices</a></h3><br>
+						<p>
+							<li>Wei Gai, Chenglei Yang, Yulong Bian, Mingda Dong, Juan Liu, Yifan Dong, <b>Chengjie
+									Niu</b>, Cheng Lin, Xiangxu Meng, Chia Shen</li><br>
+							<li>Proceedings of the 18th International Conference on Human-Computer Interaction with
+								Mobile Devices and Services Adjunct, Pages 591-593 (MobileHCI 2016)</li><br>
+							<li><a href="https://dl.acm.org/citation.cfm?id=2961824&dl=ACM&coll=DL" style="text-decoration:underline" 
+									target="_blank">[Paper]</a></li><br>
+							<!--<li><a href="paper/UbiMaze-a new genre of virtual reality game based on mobile devices.pdf">[Paper]</a></li><br>-->
+							<br>
+						</p>
+						<br>
+					</div>
+					<!--paper3------------------------------------------------------------------->
+
+					<!--paper4------------------------------------------------------------------->
+					<div class="col-md-6 col-sm-6 ggd baner-top big wow fadeInDown animated" data-wow-delay=".5s">
+						<a href="images/paper4.jpg" class="b-link-stripe b-animate-go  swipebox">
+							<div class="gal-spin-effect vertical ">
+								<img src="images/paper4.jpg" alt=" " />
+								<div class="gal-text-box">
+									<div class="info-gal-con">
+										<h4>Based on a stereo painting natural interaction game system</h4>
+										<span class="separator"></span>
+										<p>Patent of Invention</p>
+										<span class="separator"></span>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+
+					<div class="col-md-6 about-right-text">
+						<br>
+						<br>
+						<h3><a href="http://cpquery.sipo.gov.cn/txnQueryBibliographicData.do?select-key:shenqingh=2014105509319&select-key:zhuanlilx=1&select-key:backPage=http%3A%2F%2Fcpquery.sipo.gov.cn%2FtxnQueryOrdinaryPatents.do%3Fselect-key%3Ashenqingh%3D2014105509319%26select-key%3Azhuanlimc%3D%26select-key%3Ashenqingrxm%3D%26select-key%3Azhuanlilx%3D%26select-key%3Ashenqingr_from%3D%26select-key%3Ashenqingr_to%3D%26verycode%3D6%26inner-flag%3Aopen-type%3Dwindow%26inner-flag%3Aflowno%3D1545614344328&token=CB7A51BAEC30486F87398C9E793DB0E1&inner-flag:open-type=window&inner-flag:flowno=1545614363004"
+							style="text-decoration:underline" target="_blank">Based on a stereo painting natural interaction game system</a></h3><br>
+						<p>
+							<li>Chenglei Yang, Huiyu Li, Wei Gai, Hongda Yu, Yijun Yang, Xiangxu Meng, Tingting Cui,
+								Shuo Feng,Pu Huang, <b>Chengjie Niu</b></li><br>
+							<li>Patent of Invention: Patent No.2014105509319, 2014</li><br>
+							<li><a href="http://cpquery.sipo.gov.cn/txnQueryBibliographicData.do?select-key:shenqingh=2014105509319&select-key:zhuanlilx=1&select-key:backPage=http%3A%2F%2Fcpquery.sipo.gov.cn%2FtxnQueryOrdinaryPatents.do%3Fselect-key%3Ashenqingh%3D2014105509319%26select-key%3Azhuanlimc%3D%26select-key%3Ashenqingrxm%3D%26select-key%3Azhuanlilx%3D%26select-key%3Ashenqingr_from%3D%26select-key%3Ashenqingr_to%3D%26verycode%3D6%26inner-flag%3Aopen-type%3Dwindow%26inner-flag%3Aflowno%3D1545614344328&token=CB7A51BAEC30486F87398C9E793DB0E1&inner-flag:open-type=window&inner-flag:flowno=1545614363004"
+								style="text-decoration:underline" target="_blank">[Details]</a></li>
+
+						</p>
+						<br>
+						<br>
+						<br>
+						<br>
+					</div>
+					<!--paper4------------------------------------------------------------------->
+
+
+
+
+					<!-- 						<div class="col-md-4 col-sm-4 ggd baner-top three wow fadeInLeft animated" data-wow-delay=".5s">
+							<a href="images/my5.jpg" class="b-link-stripe b-animate-go  swipebox">
+								<div class="gal-spin-effect vertical ">
+									<img src="images/my5.jpg" alt=" " />
+									<div class="gal-text-box">
+										<div class="info-gal-con">
+											<h4>paper5</h4>
+											<span class="separator"></span>
+											<p>爱琴海畔，享受着欧式风格带来的浪漫的情怀</p>
+											<span class="separator"></span>
+											
+										</div>
+									</div>
+								</div>
+							</a>
+					</div>
+					<div class="col-md-4 col-sm-4 ggd baner-top three wow fadeInLeft animated" data-wow-delay=".5s">
+							<a href="images/my6.jpg" class="b-link-stripe b-animate-go  swipebox">
+								<div class="gal-spin-effect vertical ">
+									<img src="images/my6.jpg" alt=" " />
+									<div class="gal-text-box">
+										<div class="info-gal-con">
+											<h4>paper6</h4>
+											<span class="separator"></span>
+											<p>撒哈拉沙漠中，体味沙漠带来的不一样的生活</p>
+											<span class="separator"></span>
+											
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-md-4 col-sm-4 ggd baner-top three thre wow fadeInLeft animated" data-wow-delay=".5s">
+							<a href="images/my7.jpg" class="b-link-stripe b-animate-go  swipebox">
+								<div class="gal-spin-effect vertical ">
+									<img src="images/my7.jpg" alt=" " />
+									<div class="gal-text-box">
+										<div class="info-gal-con">
+											<h4>paper7</h4>
+											<span class="separator"></span>
+											<p>海南三亚，开着车、吹着海风和喝着椰汁，享受天涯海角美好的生活</p>
+											<span class="separator"></span>
+											
+										</div>
+									</div>
+								</div>
+							</a>
+						</div> -->
+
+					<div class="clearfix"> </div>
+				</div>
+
+				<!-- 				<div class="col-md-11 about-right-text">
+						<h4><a href="https://arxiv.org/abs/1804.05469">Im2Struct: Recovering 3D Shape Structure from a Single RGB Image</a></h4>
+						<p><li><b>Chengjie Niu</b>, Jun Li, Kai Xu</li>
+							<li>IEEE Conference on Computer Vision and Pattern Recognition (CVPR 2018)</li>
+							<li><a href="https://arxiv.org/abs/1804.05469">[Paper]</a><a href="https://github.com/chengjieniu/Im2Struct">[Code]</a></li>
+						</p>
+					</div> -->
+			</div>
+		</div>
+		<!-- //publications-->
+
+
+
+		<!--Awards-->
+
+		<div class="about" id="Awards">
+			<div class="container">
+				<div class="col-md-12">
+
+
+					<h3 class="tittle">Awards</h3>
+					<!-- <p class="agile">RESEARCH INTERESTS：Computer Graphics, Computer Vision, Deep Learning</p>
+				<p>XXXXXXXXXXXXXXXXXXXXXXXXXx。</p> -->
+					<br>
+					<br>
+
+				</div>
+				<div class="col-md-12 col-sm-12 about-right">
+					
+					<div class="about-right-part1">
+						<div class="col-md-12 col-sm-8">
+							<h3 style="display:inline;float:left">
+								<a href="/pdf_files/RGB 图像的三维重建深度学习方法研究.pdf"  style="text-decoration:underline" target="_blank">Excellent Master's Thesis, Hunan Province
+									--《RGB 图像的三维重建深度学习方法研究》
+								</a>
+							</h3>
+							<h3 style="text-align:right;float:right">2021</h3>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+
+					<div class="about-right-part1">
+						<div class="col-md-12 col-sm-8">
+							<h3 style="display:inline;float:left">Outstanding Graduate Award, Shandong Province (Top 1)
+							</h3>
+							<h3 style="text-align:right;float:right">2016</h3>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+
+					<div class="about-right-part2">
+						<div class="col-md-12 col-sm-8">
+							<h3 style="display:inline;float:left">National Innovation Fund for Undergraduates</h3>
+							<h3 style="text-align:right;float:right">2015-2016</h3>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+
+
+					<div class="about-right-part3">
+						<div class="col-md-12 col-sm-8">
+							<h3 style="display:inline;float:left">First Prize Scholarship, Shandong University (Awarded
+								to Top 5% students)</h3>
+							<h3 style="text-align:right;float:right">2013-2015</h3>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="about-right-part4">
+						<div class="col-md-12 col-sm-8">
+							<h3 style="display:inline;float:left">“Outstanding Students” of Shandong University (Awarded
+								to Top 5% students)</h3>
+							<h3 style="text-align:right;float:right">2013-2015</h3>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+
+					<div class="about-right-part5">
+						<div class="col-md-12 col-sm-8">
+							<h3 style="display:inline;float:left">National Scholarship of China (Top 1)</h3>
+							<h3 style="text-align:right;float:right">2014</h3>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+
+					<div class="about-right-part6">
+						<div class="col-md-12 col-sm-8">
+							<h3 style="display:inline;float:left">National Encouragement Scholarship of China</h3>
+							<h3 style="text-align:right;float:right">2013</h3>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+
+
+
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+		<!--//end-Awards-->
+
+
+		<!--联系方式-->
+		<div class="touch" id="Contact">
+			<div class="container">
+				<h3 class="tittle">Contact Information</h3><br>
+				<h3><b>Chengjie Niu</b></h3>
+				<!-- <h3 style="text-align:left"> Ph.D. </h3> -->
+				<!-- <h3 style="text-align:left">School of Computer Science</h3> -->
+				<!-- <h3 style="text-align:left">National University of Defense Technology</h3> -->
+				<!-- <h3 style="text-align:left">Changsha, P.R. China</h3> -->
+				<li>Ph.D. </li>
+				<li>School of Computer Science</li>
+				<li>National University of Defense Technology</li>
+				<li>Changsha, P.R. China</li>
+				<h3><b>Email:</b></h3>
+				<li>nchengjie@gmail.com</li>
+
+				<h3><b>Address:</b></h3>
+				<li>School of Computer, National University of Defense Technology.</li>
+				<li>109 Deya Rd., Kaifu District, Changsha City, Hunan Province, 410073, P.R.China</li>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<!--//联系方式-->
+
+		<!--footer-->
+		<div class="footer text-center">
+			<div class="container">
+				<p class="copy-right wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">Copyright &copy; 2018.
+					Designed by Yifan Dong. Know more, please contact <a target="Contact">Chengjie Niu</a></p>
+
+				<!--<ul class="social wow slideInDown" data-wow-duration="1s" data-wow-delay=".3s">
+										<li><a href="#" class="tw"></a></li>
+										<li><a href="#" class="fb"> </a></li>
+										<li><a href="#" class="in"> </a></li>
+										<li><a href="#" class="dott"></a></li>
+										 <div class="clearfix"></div>
+									</ul>-->
+
+			</div>
+		</div>
+		<!--start-smooth-scrolling-->
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$().UItoTop({
+					easingType: 'easeOutQuart'
+				});
+
+			});
+		</script>
+		<!--end-smooth-scrolling-->
+		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;">
+			</span></a>
+		<script src="js/bootstrap.min.js"></script>
+	</div>
+</body>
+
+</html>
