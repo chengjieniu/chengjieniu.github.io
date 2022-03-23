@@ -28,7 +28,7 @@ input[type="button"],input[type="submit"],li.parallelogram{
 }
 h1,h2,h3,h4,h5,h6{
 	margin:0;	
-	font-family: 'PT Sans', sans-serif;
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
 }	
 p{
 	margin:0;
@@ -971,7 +971,6 @@ h3.title,h2.title.review {
 }
 /*--//review--*/
 
-}
 /*-- contact-page --*/
 div#contact {
     padding: 4em 0;
@@ -1883,7 +1882,7 @@ div#contact {
 	}
 	.test-review p {
 		margin: 2em 0em;
-`	}
+	}
 	.test-video {
 		padding: 0;
 	}
@@ -2257,7 +2256,7 @@ div#contact {
 	}
 	.test-review p {
 		margin: 0em;
-`	}
+	}
 	.touch-left, .touch-right-w3l {
 		width: 100%;
 	}
